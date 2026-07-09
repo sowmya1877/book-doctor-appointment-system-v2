@@ -19,7 +19,9 @@ function EditDoctor() {
 
   const getDoctor = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/doctors");
+      const res = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors"
+      );
 
       const selectedDoctor = res.data.find((d) => d._id === id);
 
@@ -43,7 +45,7 @@ function EditDoctor() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/doctors/${id}`,
+        `https://book-doctor-appointment-system-v2.onrender.com/api/doctors/${id}`,
         doctor
       );
 

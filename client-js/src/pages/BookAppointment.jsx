@@ -13,10 +13,13 @@ function BookAppointment() {
 
   const fetchDoctors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/doctors");
+      const res = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors"
+      );
       setDoctors(res.data);
     } catch (err) {
       console.log(err);
+      alert("Unable to load doctors");
     }
   };
 
@@ -24,11 +27,14 @@ function BookAppointment() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/appointments/book", {
-        patientName,
-        doctor,
-        appointmentDate,
-      });
+      await axios.post(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/appointments/book",
+        {
+          patientName,
+          doctor,
+          appointmentDate,
+        }
+      );
 
       alert("Appointment Booked Successfully!");
 
@@ -54,7 +60,8 @@ function BookAppointment() {
           required
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <select
           value={doctor}
@@ -70,7 +77,8 @@ function BookAppointment() {
           ))}
         </select>
 
-        <br /><br />
+        <br />
+        <br />
 
         <input
           type="date"
@@ -79,7 +87,8 @@ function BookAppointment() {
           required
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <button type="submit">
           Book Appointment

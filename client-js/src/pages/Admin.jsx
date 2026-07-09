@@ -13,30 +13,32 @@ function Admin() {
 
   const loadDashboard = async () => {
     try {
-      const doctors = await axios.get("http://localhost:5000/api/doctors");
+      const doctors = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors"
+      );
+
       const appointments = await axios.get(
-        "http://localhost:5000/api/appointments"
+        "https://book-doctor-appointment-system-v2.onrender.com/api/appointments"
       );
 
       setDoctorCount(doctors.data.length);
       setAppointmentCount(appointments.data.length);
 
-      // Change this when you create the Users API
+      // Change this when you create Users API
       setUserCount(1);
     } catch (error) {
       console.log(error);
+      alert("Failed to load dashboard");
     }
   };
 
   return (
     <div className="container mt-5">
-
       <h1 className="text-center mb-5">
         👨‍💼 Admin Dashboard
       </h1>
 
       <div className="row">
-
         <div className="col-md-4">
           <div className="card bg-primary text-white p-4 shadow">
             <h3>Total Doctors</h3>
@@ -57,13 +59,11 @@ function Admin() {
             <h1>{userCount}</h1>
           </div>
         </div>
-
       </div>
 
       <hr className="my-5" />
 
       <div className="row">
-
         <div className="col-md-4 mb-3">
           <Link className="btn btn-primary w-100" to="/doctors">
             Manage Doctors
@@ -81,9 +81,7 @@ function Admin() {
             Add Doctor
           </Link>
         </div>
-
       </div>
-
     </div>
   );
 }

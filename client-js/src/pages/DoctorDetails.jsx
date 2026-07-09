@@ -12,7 +12,10 @@ function DoctorDetails() {
 
   const getDoctor = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/doctors");
+      const res = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors"
+      );
+
       const selectedDoctor = res.data.find((doc) => doc._id === id);
 
       if (selectedDoctor) {
@@ -34,7 +37,6 @@ function DoctorDetails() {
   return (
     <div className="container mt-5">
       <div className="card shadow-lg p-4">
-
         <div className="text-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/387/387561.png"
@@ -47,24 +49,26 @@ function DoctorDetails() {
 
         <hr />
 
-        <p><strong>Specialization:</strong> {doctor.specialization}</p>
+        <p>
+          <strong>Specialization:</strong> {doctor.specialization}
+        </p>
 
-        <p><strong>Experience:</strong> {doctor.experience} Years</p>
+        <p>
+          <strong>Experience:</strong> {doctor.experience} Years
+        </p>
 
-        <p><strong>Consultation Fee:</strong> ₹{doctor.fees}</p>
+        <p>
+          <strong>Consultation Fee:</strong> ₹{doctor.fees}
+        </p>
 
         <p>
           <strong>Availability:</strong>{" "}
           {doctor.available ? "Available" : "Not Available"}
         </p>
 
-        <Link
-          to="/book"
-          className="btn btn-success mt-3"
-        >
+        <Link to="/book" className="btn btn-success mt-3">
           Book Appointment
         </Link>
-
       </div>
     </div>
   );
