@@ -19,7 +19,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://book-doctor-appointment-system-v2.onrender.com/api/auth/login",
         user
       );
 
@@ -27,13 +27,13 @@ function Login() {
 
       localStorage.setItem("token", res.data.token);
 
-localStorage.setItem(
-  "user",
-  JSON.stringify({
-    email: user.email,
-    name: user.name || "User",
-  })
-);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: user.email,
+          name: user.name || "User",
+        })
+      );
 
     } catch (err) {
       alert(err.response?.data?.message || "Login Failed");
@@ -45,7 +45,6 @@ localStorage.setItem(
       <h2>Login</h2>
 
       <form onSubmit={handleSubmit}>
-
         <input
           type="email"
           name="email"
@@ -54,7 +53,8 @@ localStorage.setItem(
           onChange={handleChange}
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <input
           type="password"
@@ -64,17 +64,18 @@ localStorage.setItem(
           onChange={handleChange}
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <button type="submit">
           Login
         </button>
-        <div className="text-center mt-3">
-  <a href="/forgot-password">
-    Forgot Password?
-  </a>
-</div>
 
+        <div className="text-center mt-3">
+          <a href="/forgot-password">
+            Forgot Password?
+          </a>
+        </div>
       </form>
     </div>
   );

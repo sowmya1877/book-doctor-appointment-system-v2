@@ -10,8 +10,10 @@ function Appointments() {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/appointments");
-      console.log(res.data); // Check browser console
+      const res = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/appointments"
+      );
+      console.log(res.data);
       setAppointments(res.data);
     } catch (err) {
       console.log(err);
@@ -22,7 +24,7 @@ function Appointments() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${id}/status`,
+        `https://book-doctor-appointment-system-v2.onrender.com/api/appointments/${id}/status`,
         { status }
       );
 
@@ -39,7 +41,7 @@ function Appointments() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/appointments/${id}`
+        `https://book-doctor-appointment-system-v2.onrender.com/api/appointments/${id}`
       );
 
       alert("Appointment Deleted");

@@ -14,7 +14,10 @@ function Doctors() {
   // Get all doctors
   const getDoctors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/doctors");
+      const res = await axios.get(
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors"
+      );
+
       setDoctors(res.data);
     } catch (err) {
       console.log(err);
@@ -31,7 +34,9 @@ function Doctors() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/doctors/${id}`);
+      await axios.delete(
+        `https://book-doctor-appointment-system-v2.onrender.com/api/doctors/${id}`
+      );
 
       alert("Doctor Deleted Successfully");
 
@@ -54,7 +59,6 @@ function Doctors() {
 
   return (
     <div className="container mt-5">
-
       <h1 className="text-center mb-4">
         Our Doctors
       </h1>
@@ -83,13 +87,12 @@ function Doctors() {
               <DoctorCard doctor={doctor} />
 
               <div className="d-grid gap-2 mt-3">
-
                 <Link
-  to={`/doctor/${doctor._id}`}
-  className="btn btn-primary"
->
-  View Details
-</Link>
+                  to={`/doctor/${doctor._id}`}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </Link>
 
                 <Link
                   to={`/edit-doctor/${doctor._id}`}
@@ -104,7 +107,6 @@ function Doctors() {
                 >
                   Delete Doctor
                 </button>
-
               </div>
             </div>
           ))

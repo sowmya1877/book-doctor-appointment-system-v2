@@ -1,9 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
-function Register() {
+function Login() {
   const [user, setUser] = useState({
-    name: "",
     email: "",
     password: "",
   });
@@ -20,39 +19,32 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://book-doctor-appointment-system-v2.onrender.com/api/auth/login",
         user
       );
 
       alert(res.data.message);
 
-      setUser({
-        name: "",
-        email: "",
-        password: "",
-      });
+      localStorage.setItem("token", res.data.token);
+
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          email: user.email,
+          name: user.name || "User",
+        })
+      );
 
     } catch (err) {
-      alert(err.response?.data?.message || "Registration Failed");
+      alert(err.response?.data?.message || "Login Failed");
     }
   };
 
   return (
     <div style={{ width: "350px", margin: "40px auto" }}>
-      <h2>User Registration</h2>
+      <h2>Login</h2>
 
       <form onSubmit={handleSubmit}>
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter Name"
-          value={user.name}
-          onChange={handleChange}
-        />
-
-        <br /><br />
-
         <input
           type="email"
           name="email"
@@ -61,7 +53,8 @@ function Register() {
           onChange={handleChange}
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <input
           type="password"
@@ -71,15 +64,21 @@ function Register() {
           onChange={handleChange}
         />
 
-        <br /><br />
+        <br />
+        <br />
 
         <button type="submit">
-          Register
+          Login
         </button>
 
+        <div className="text-center mt-3">
+          <a href="/forgot-password">
+            Forgot Password?
+          </a>
+        </div>
       </form>
     </div>
   );
 }
 
-export default Register;
+export default Login;

@@ -3,12 +3,12 @@ import axios from "axios";
 
 function AddDoctor() {
   const [doctor, setDoctor] = useState({
-  name: "",
-  specialization: "",
-  experience: "",
-  fees: "",
-  image: "",
-});
+    name: "",
+    specialization: "",
+    experience: "",
+    fees: "",
+    image: "",
+  });
 
   const handleChange = (e) => {
     setDoctor({
@@ -22,7 +22,7 @@ function AddDoctor() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/doctors/add",
+        "https://book-doctor-appointment-system-v2.onrender.com/api/doctors/add",
         doctor
       );
 
@@ -33,6 +33,7 @@ function AddDoctor() {
         specialization: "",
         experience: "",
         fees: "",
+        image: "",
       });
     } catch (err) {
       console.log(err);
@@ -69,17 +70,17 @@ function AddDoctor() {
               required
             />
           </div>
-          <div className="mb-3">
-  <label className="form-label">Doctor Image URL</label>
 
-  <input
-    type="text"
-    className="form-control"
-    name="image"
-    value={doctor.image}
-    onChange={handleChange}
-  />
-</div>
+          <div className="mb-3">
+            <label className="form-label">Doctor Image URL</label>
+            <input
+              type="text"
+              className="form-control"
+              name="image"
+              value={doctor.image}
+              onChange={handleChange}
+            />
+          </div>
 
           <div className="mb-3">
             <label className="form-label">Experience (Years)</label>
