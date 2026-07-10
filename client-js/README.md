@@ -1,27 +1,51 @@
 # 🏥 Book Doctor Appointment System
 
-A full-stack MERN web application for booking doctor appointments online. Patients can register, log in, view doctors, and book appointments. Administrators can manage doctors and appointments.
+A full-stack MERN (MongoDB, Express.js, React.js, Node.js) web application that enables patients to book doctor appointments online. The system provides secure user authentication, doctor management, appointment booking, and an admin dashboard.
+
+---
+
+## 🌐 Live Demo
+
+**Frontend:**  
+https://book-doctor-appointment-system-v2-1.onrender.com
+
+**Backend API:**  
+https://book-doctor-appointment-system-v2.onrender.com
+
+---
+
+## 🎥 Project Demo
+
+📺 **Watch the complete project demonstration here:**
+
+👉 **Google Drive Video:**  
+https://drive.google.com/file/d/1kgymElX-HLCA8kch02BflXmhxMm9dEtW/view?usp=sharing
+
+---
 
 ## ✨ Features
 
-- User Registration & Login
+- User Registration
+- User Login
 - JWT Authentication
 - View Doctors
 - Search Doctors
 - Doctor Details
 - Book Appointment
+- Appointment Management
 - Admin Dashboard
 - Add Doctor
 - Edit Doctor
 - Delete Doctor
-- Appointment Management
 - Responsive Design
+
+---
 
 ## 🛠 Tech Stack
 
 ### Frontend
 - React.js
-- React Router
+- React Router DOM
 - Axios
 - Bootstrap
 
@@ -34,13 +58,15 @@ A full-stack MERN web application for booking doctor appointments online. Patien
 - Mongoose
 
 ### Deployment
-- Frontend: Render Static Site
-- Backend: Render Web Service
-- Database: MongoDB Atlas
+- Frontend – Render Static Site
+- Backend – Render Web Service
+- Database – MongoDB Atlas
+
+---
 
 ## 📂 Project Structure
 
-```
+```text
 book-doctor-appointment-system-v2
 │
 ├── client-js
@@ -53,11 +79,15 @@ book-doctor-appointment-system-v2
 │   ├── models
 │   ├── routes
 │   ├── middleware
+│   ├── uploads
 │   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── .env
 │
 └── README.md
 ```
+
+---
 
 ## 🚀 Installation
 
@@ -83,15 +113,19 @@ npm install
 npm start
 ```
 
+---
+
 ## 🔐 Environment Variables
 
 Create a `.env` file inside the `server` folder.
 
 ```env
-MONGO_URI=Your_MongoDB_Connection_String
-JWT_SECRET=Your_JWT_Secret
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+JWT_SECRET=YOUR_JWT_SECRET
 PORT=5000
 ```
+
+---
 
 ## 📡 API Endpoints
 
@@ -114,25 +148,31 @@ PORT=5000
 - PUT `/api/appointments/:id/status`
 - DELETE `/api/appointments/:id`
 
-## 📸 Screenshots
+---
 
-Add screenshots of:
+## 🔒 Authentication
 
-- Home Page
-- Login
-- Register
-- Doctors
-- Doctor Details
-- Book Appointment
-- Admin Dashboard
+The application uses **JWT (JSON Web Token)** authentication.
 
-## 🌟 Future Enhancements
+- Secure User Registration
+- Secure User Login
+- Protected Routes
+- Token-based Authentication
 
-- Online Payment
+---
+
+## 🚀 Future Enhancements
+
+- Online Payment Gateway
 - Email Notifications
+- SMS Notifications
 - Video Consultation
 - AI-based Doctor Recommendation
-- Appointment Reminders
+- Appointment Reminder System
+- Doctor Availability Calendar
+- Patient Medical History
+
+---
 
 ## 👩‍💻 Author
 
@@ -142,8 +182,10 @@ B.Tech – Artificial Intelligence and Data Science
 
 Annamacharya Institute of Technology and Sciences
 
-Academic Year: 2026–2027
+Academic Year: **2026–2027**
+
+---
 
 ## 📄 License
 
-This project is for educational purposes.
+This project is developed for educational purposes.
