@@ -1,16 +1,149 @@
-# React + Vite
+# 🏥 Book Doctor Appointment System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack MERN web application for booking doctor appointments online. Patients can register, log in, view doctors, and book appointments. Administrators can manage doctors and appointments.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Registration & Login
+- JWT Authentication
+- View Doctors
+- Search Doctors
+- Doctor Details
+- Book Appointment
+- Admin Dashboard
+- Add Doctor
+- Edit Doctor
+- Delete Doctor
+- Appointment Management
+- Responsive Design
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React.js
+- React Router
+- Axios
+- Bootstrap
 
-## Expanding the Oxlint configuration
+### Backend
+- Node.js
+- Express.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Database
+- MongoDB Atlas
+- Mongoose
+
+### Deployment
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- Database: MongoDB Atlas
+
+## 📂 Project Structure
+
+```
+book-doctor-appointment-system-v2
+│
+├── client-js
+│   ├── src
+│   ├── public
+│   └── package.json
+│
+├── server
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   ├── middleware
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+```
+
+## 🚀 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/sowmya1877/book-doctor-appointment-system-v2.git
+```
+
+### Frontend
+
+```bash
+cd client-js
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
+```
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```env
+MONGO_URI=Your_MongoDB_Connection_String
+JWT_SECRET=Your_JWT_Secret
+PORT=5000
+```
+
+## 📡 API Endpoints
+
+### Authentication
+
+- POST `/api/auth/register`
+- POST `/api/auth/login`
+
+### Doctors
+
+- GET `/api/doctors`
+- POST `/api/doctors/add`
+- PUT `/api/doctors/:id`
+- DELETE `/api/doctors/:id`
+
+### Appointments
+
+- POST `/api/appointments/book`
+- GET `/api/appointments`
+- PUT `/api/appointments/:id/status`
+- DELETE `/api/appointments/:id`
+
+## 📸 Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Login
+- Register
+- Doctors
+- Doctor Details
+- Book Appointment
+- Admin Dashboard
+
+## 🌟 Future Enhancements
+
+- Online Payment
+- Email Notifications
+- Video Consultation
+- AI-based Doctor Recommendation
+- Appointment Reminders
+
+## 👩‍💻 Author
+
+**Sowmya Reddy**
+
+B.Tech – Artificial Intelligence and Data Science
+
+Annamacharya Institute of Technology and Sciences
+
+Academic Year: 2026–2027
+
+## 📄 License
+
+This project is for educational purposes.
