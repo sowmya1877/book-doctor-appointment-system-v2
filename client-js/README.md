@@ -6,58 +6,93 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) web application that 
 
 ## 🌐 Live Demo
 
-**Frontend:**  
+### Frontend
 https://book-doctor-appointment-system-v2-1.onrender.com
 
-**Backend API:**  
+### Backend API
 https://book-doctor-appointment-system-v2.onrender.com
 
 ---
 
 ## 🎥 Project Demo
 
-📺 **Watch the complete project demonstration here:**
+Watch the complete project demonstration below.
 
-👉 **Google Drive Video:**  
-https://drive.google.com/file/d/1kgymElX-HLCA8kch02BflXmhxMm9dEtW/view?usp=sharing
+### 📺 Demo Video (Google Drive)
+
+🔗 https://drive.google.com/file/d/1Wlgh0kKTSRKvIRZpJ2v2oCXOsWXP17uT/view?usp=sharing
+
+> The video demonstrates the complete workflow of the application, including:
+>
+> - User Registration
+> - User Login
+> - JWT Authentication
+> - View Doctors
+> - Search Doctors
+> - Book Appointment
+> - Appointment Management
+> - Admin Dashboard
+> - Add/Edit/Delete Doctors
+> - Responsive User Interface
 
 ---
 
 ## ✨ Features
 
+### Patient Features
+
 - User Registration
-- User Login
+- Secure Login
 - JWT Authentication
-- View Doctors
+- View All Doctors
 - Search Doctors
-- Doctor Details
-- Book Appointment
-- Appointment Management
+- View Doctor Details
+- Book Appointments
+- View Appointment History
+
+### Admin Features
+
 - Admin Dashboard
 - Add Doctor
 - Edit Doctor
 - Delete Doctor
+- Manage Appointments
+
+### General Features
+
 - Responsive Design
+- REST API Integration
+- MongoDB Database
+- Secure Authentication
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - React.js
 - React Router DOM
 - Axios
 - Bootstrap
+- CSS
 
 ### Backend
+
 - Node.js
 - Express.js
 
 ### Database
+
 - MongoDB Atlas
 - Mongoose
 
+### Authentication
+
+- JSON Web Token (JWT)
+
 ### Deployment
+
 - Frontend – Render Static Site
 - Backend – Render Web Service
 - Database – MongoDB Atlas
@@ -70,15 +105,20 @@ https://drive.google.com/file/d/1kgymElX-HLCA8kch02BflXmhxMm9dEtW/view?usp=shari
 book-doctor-appointment-system-v2
 │
 ├── client-js
-│   ├── src
 │   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── App.jsx
+│   │   └── main.jsx
 │   └── package.json
 │
 ├── server
 │   ├── controllers
+│   ├── middleware
 │   ├── models
 │   ├── routes
-│   ├── middleware
 │   ├── uploads
 │   ├── server.js
 │   ├── package.json
@@ -91,13 +131,21 @@ book-doctor-appointment-system-v2
 
 ## 🚀 Installation
 
-### Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/sowmya1877/book-doctor-appointment-system-v2.git
 ```
 
-### Frontend
+### 2. Navigate to the Project
+
+```bash
+cd book-doctor-appointment-system-v2
+```
+
+---
+
+## 💻 Frontend Setup
 
 ```bash
 cd client-js
@@ -105,7 +153,11 @@ npm install
 npm run dev
 ```
 
-### Backend
+---
+
+## ⚙ Backend Setup
+
+Open another terminal.
 
 ```bash
 cd server
@@ -121,7 +173,9 @@ Create a `.env` file inside the `server` folder.
 
 ```env
 MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
-JWT_SECRET=YOUR_JWT_SECRET
+
+JWT_SECRET=YOUR_SECRET_KEY
+
 PORT=5000
 ```
 
@@ -131,33 +185,42 @@ PORT=5000
 
 ### Authentication
 
-- POST `/api/auth/register`
-- POST `/api/auth/login`
+| Method | Endpoint |
+|---------|----------|
+| POST | `/api/auth/register` |
+| POST | `/api/auth/login` |
 
 ### Doctors
 
-- GET `/api/doctors`
-- POST `/api/doctors/add`
-- PUT `/api/doctors/:id`
-- DELETE `/api/doctors/:id`
+| Method | Endpoint |
+|---------|----------|
+| GET | `/api/doctors` |
+| POST | `/api/doctors/add` |
+| PUT | `/api/doctors/:id` |
+| DELETE | `/api/doctors/:id` |
 
 ### Appointments
 
-- POST `/api/appointments/book`
-- GET `/api/appointments`
-- PUT `/api/appointments/:id/status`
-- DELETE `/api/appointments/:id`
+| Method | Endpoint |
+|---------|----------|
+| POST | `/api/appointments/book` |
+| GET | `/api/appointments` |
+| PUT | `/api/appointments/:id/status` |
+| DELETE | `/api/appointments/:id` |
 
 ---
 
 ## 🔒 Authentication
 
-The application uses **JWT (JSON Web Token)** authentication.
+The application uses **JWT (JSON Web Token)** for authentication.
+
+Features include:
 
 - Secure User Registration
-- Secure User Login
+- Secure Login
 - Protected Routes
-- Token-based Authentication
+- Token-Based Authentication
+- Authorization Middleware
 
 ---
 
@@ -171,6 +234,7 @@ The application uses **JWT (JSON Web Token)** authentication.
 - Appointment Reminder System
 - Doctor Availability Calendar
 - Patient Medical History
+- Doctor Ratings & Reviews
 
 ---
 
@@ -184,8 +248,17 @@ Annamacharya Institute of Technology and Sciences
 
 Academic Year: **2026–2027**
 
+GitHub:
+https://github.com/sowmya1877
+
 ---
 
 ## 📄 License
 
 This project is developed for educational purposes.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
