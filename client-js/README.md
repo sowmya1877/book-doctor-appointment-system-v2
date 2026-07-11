@@ -20,8 +20,7 @@ Watch the complete project demonstration below.
 
 ### 📺 Demo Video (Google Drive)
 
-🔗 https://drive.google.com/file/d/1Wlgh0kKTSRKvIRZpJ2v2oCXOsWXP17uT/view?usp=sharing
-
+🔗 https://drive.google.com/file/d/1yvuXVG0y9Is8JIeNbBN4aUXjSx3S6-A8/view?usp=sharing
 > The video demonstrates the complete workflow of the application, including:
 >
 > - User Registration
